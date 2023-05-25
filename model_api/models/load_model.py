@@ -1,4 +1,5 @@
 from transformers import pipeline
+import torch
 
 class Model:
     """Load model and predicting"""
@@ -6,6 +7,7 @@ class Model:
 	# 加载模型
     def __init__(self):
         self.question_answerer = pipeline("question-answering")
+        
 	
 	# 预测
     def predict(self, question, context ):
